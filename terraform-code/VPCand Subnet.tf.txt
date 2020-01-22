@@ -1,0 +1,22 @@
+provider "aws" {
+  access_key = "AKIAYIH4F5H4AP76MZPK"
+  secret_key = "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"
+  region     = "us-east-1"
+}
+resource "aws_vpc" "vpc" {
+  cidr_block       = "190.160.0.0/16"
+  instance_tenancy = "default"
+
+  tags = {
+    Name = "TerraformVPC"
+    Location = "Hyderabad"
+  }
+}
+resource "aws_subnet" "subnet1" {
+  vpc_id     = "${aws_vpc.vpc.id}"
+  cidr_block = "190.160.0.0/16"
+
+  tags = {
+    Name = "Subnet1"
+  }
+}
