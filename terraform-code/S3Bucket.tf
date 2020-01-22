@@ -3,7 +3,7 @@ resource "aws_s3_bucket" "b" {
   acl    = "private"
 
   tags = {
-    Name        = "Terraformdemo bucket"
+    Name        = "N-12345-Terraformdemo-bucket"
     Environment = "Dev-Env"
   }
   versioning {
