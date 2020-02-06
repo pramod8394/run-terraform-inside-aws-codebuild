@@ -6,7 +6,7 @@
         "DataPartName" : {
           "Description": "the data part name as appear in the cloudformation stack name",
           "Type": "String",
-          "Default" : "mydataname"
+          "Default" : "n-12345-mydataname"
         }
   },
   "Resources" : {
